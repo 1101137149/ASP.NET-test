@@ -1,12 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+=======
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+>>>>>>> e454fe1377f768192ee527504a60b9ceaff78cef
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,6 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+<<<<<<< HEAD
                 @Html.ActionLink("期末作業_留言板", "Index", "ms_data", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
@@ -26,10 +37,25 @@
         </div>
     </div>
 
+=======
+                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                    <li>@Html.ActionLink("關於", "About", "Home")</li>
+                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+>>>>>>> e454fe1377f768192ee527504a60b9ceaff78cef
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
+<<<<<<< HEAD
             <p>&copy; @DateTime.Now.Year - 期末作業-留言板-柯昱佑(1101137247)-蕭文婷(1101137149)</p>
         </footer>
     </div>
@@ -38,3 +64,14 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+=======
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+>>>>>>> e454fe1377f768192ee527504a60b9ceaff78cef
