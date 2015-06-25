@@ -4,24 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>歡迎來到留言板</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h3>
+    @Html.ActionLink("新增留言", "Create")
+</h3>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.name)
+            留言者
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.email)
+            留言者_信箱
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.message)
+            留言內容
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.time)
+            留言時間
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.time)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("編輯留言", "Edit", new { id=item.id }) |
+            @Html.ActionLink("詳細資料", "Details", new { id=item.id }) |
+            @Html.ActionLink("刪除留言", "Delete", new { id=item.id })
         </td>
     </tr>
 }

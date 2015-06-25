@@ -1,0 +1,55 @@
+﻿@model FinalASP.Models.ms_data
+
+@{
+    ViewBag.Title = "留言板-刪除留言";
+}
+
+<h2>刪除留言</h2>
+
+<h3>確定要刪掉此留言??</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            留言者:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            信箱:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            留言內容:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.message)
+        </dd>
+
+        <dt>
+            留言時間:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="確定刪除" class="btn btn-default" /> |
+            @Html.ActionLink("回留言板", "Index")
+        </div>
+    }
+</div>
